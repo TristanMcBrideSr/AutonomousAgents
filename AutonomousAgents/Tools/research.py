@@ -11,7 +11,7 @@ from google.genai import types
 argParser = ArgumentParser()
 load_dotenv()
 gptClient = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-genClient = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+genClient = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 def research(instructions: str):
     """

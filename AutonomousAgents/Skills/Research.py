@@ -36,7 +36,7 @@ class Research:
         self.holoLink = HoloLink()
         self.provider  = os.getenv("PROVIDER", "openai")
         self.gptClient = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.genClient = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+        self.genClient = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
         self.actionMap = {
             "research": self._research
         }

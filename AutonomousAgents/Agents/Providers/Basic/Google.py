@@ -8,7 +8,7 @@ from Utils.SkillGraph import SkillGraph
 
 # Load environment
 load_dotenv()
-apiKey = os.getenv("GOOGLE_API_KEY")
+apiKey = os.getenv("GEMINI_API_KEY")
 genClient = genai.Client(api_key=apiKey)
 
 # Load tools + callable functions from SkillGraph

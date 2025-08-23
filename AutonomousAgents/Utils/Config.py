@@ -14,12 +14,12 @@ from HoloAI import (HoloAI, HoloRelay)
 
 load_dotenv()
 # gptClient = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-# genClient = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+# genClient = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Set These Environment Variables in your .env file or system environment variables
 # PROVIDER=openai or google (default is openai)
 # OPENAI_API_KEY=your_openai_api_key
-# GOOGLE_API_KEY=your_google_api_key
+# GEMINI_API_KEY=your_google_api_key
 ##-------------------------------------- NOTE --------------------------------------
 # HoloAI supports OpenAI, Google, xAI, Anthropic, Groq.
 # Make sure to add your api keys for the Provider(s) in the .env file or set them in your environment variables that you want to use.

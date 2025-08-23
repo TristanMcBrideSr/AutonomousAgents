@@ -10,7 +10,7 @@ from HoloAI import HoloRelay
 
 load_dotenv()
 
-apiKey    = os.getenv("GOOGLE_API_KEY")
+apiKey    = os.getenv("GEMINI_API_KEY")
 genClient = genai.Client(api_key=apiKey)
 
 # Load typed tools + callable function registry once, reuse everywhere
