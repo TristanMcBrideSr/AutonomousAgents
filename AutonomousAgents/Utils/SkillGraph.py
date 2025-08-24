@@ -80,6 +80,16 @@ class SkillGraph:
         )
         return self.holoLink.getComponents(skills)
 
+    def setAutoReload(self, autoReload: bool = False, cycleInterval: int = 60) -> None:
+        """
+        Set whether to automatically reload skills when they change.
+        This is useful for development and testing purposes.
+        By default HoloLink auto reload is set to True with a cycle interval of 60 seconds you can change this 
+        by passing autoReload=False to disable or a different cycleInterval in seconds.
+        Only necessary when letting the agent create new skills or when you want to refresh the skills during runtime.
+        """
+        self.skillLink.setAutoReload(autoReload, cycleInterval)
+
     def reloadSkills(self):
         """
         Reload all skills and print any new skills added.
