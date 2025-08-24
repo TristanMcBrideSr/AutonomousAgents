@@ -88,7 +88,7 @@ class SkillGraph:
         by passing autoReload=False to disable or a different cycleInterval in seconds.
         Only necessary when letting the agent create new skills or when you want to refresh the skills during runtime.
         """
-        self.skillLink.setAutoReload(autoReload, cycleInterval)
+        self.holoLink.setAutoReload(autoReload, cycleInterval)
 
     def reloadSkills(self):
         """
