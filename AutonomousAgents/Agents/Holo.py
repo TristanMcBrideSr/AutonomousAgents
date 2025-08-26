@@ -38,7 +38,7 @@ class MainAgent:
         mainAgent = AGENT_NAME # = MAIN_MINIONS[random.randint(0, len(MAIN_MINIONS) - 1)]
         system, instructions = self.configSystem(mainAgent)
         msgs = self.holoAI.formatConversation(self.memories, userGoal)
-        skills = graph.getAgentCapabilities()
+        skills = graph.getAgentSkills()
         actions = graph.getAgentActions()
         answer = self.holoAI.HoloAgent(
             model=self.modelMap[self.provider],

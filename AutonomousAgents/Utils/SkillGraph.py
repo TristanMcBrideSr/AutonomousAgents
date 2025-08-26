@@ -39,7 +39,7 @@ class SkillGraph:
         self.showMetaData     = os.getenv('SHOW_METADATA', 'False') == 'True'
         self.loadAllComponents()
         if self.showCapabilities:
-            self.getAgentCapabilities()
+            self.getAgentSkills()
         if self.showMetaData:
             self.getMetaData()
 
@@ -109,7 +109,7 @@ class SkillGraph:
         return self.holoLink.getMetaData(metaData, self.showMetaData)
 
     # ----- Skills -----
-    def getAgentCapabilities(self):
+    def getAgentSkills(self):
         """
         Get the capabilities of the agent based on its skills.
         This method retrieves the capabilities of the agent's skills and returns them in a structured format.
@@ -153,7 +153,7 @@ class SkillGraph:
         """
         Get skill instructions for the agent based on its capabilities.
         """
-        return self.holoLink.skillInstructions(self.getAgentCapabilities())
+        return self.holoLink.skillInstructions(self.getAgentSkills())
 
 
     # ----- Tools -----
